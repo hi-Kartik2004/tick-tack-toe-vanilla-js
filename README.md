@@ -1,4 +1,5 @@
 # Tick-Tack-Toe Game frontend | Build for web-sprint (Event organised by IEEE UVCE)
+Completely responsive tick-tack-toe game (Frontend).
 
 # Features
 - Allows users to decide the game layout. (i.e Number of rows and columns)
