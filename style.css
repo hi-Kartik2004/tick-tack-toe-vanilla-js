@@ -24,12 +24,16 @@ body {
   color: var(--text-color);
   font-family: 'Mooli', sans-serif;
     font-family: 'Poppins', sans-serif;
-    padding: 0px 20px;
+    /* padding: 0px 20px; */
     width: 100%;
 }
 
+h1{
+  padding: 10px;
+}
+
 a{
-    text-decoration: none;
+    /* text-decoration: none; */
     color: var(--text-color);
 }
 
@@ -64,6 +68,7 @@ a{
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding: 0px 10px;
   /* background-color: red; */
 }
 
@@ -79,6 +84,7 @@ button {
     color: var(--text-color);
   padding: 10px 20px;
   border: 2px dashed var(--text-color);
+  cursor: pointer;
 }
 
 #theme-btn{
@@ -102,7 +108,13 @@ button {
 
 
 footer{
-    margin-bottom: 1rem;
+  position: absolute;
+  width: 100%;
+  margin-top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
 }
 
 input{
@@ -111,6 +123,19 @@ input{
   background-color: var(--bg-color);
   border: 1px solid var(--text-color);
   color: var(--text-color);
+}
+
+#reset{
+  margin-bottom: 2rem;
+}
+
+.bottom{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
 
 

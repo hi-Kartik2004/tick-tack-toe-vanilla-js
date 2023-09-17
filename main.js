@@ -69,7 +69,6 @@ function handleThemeBtn() {
 function generateWinningCombinations(rows, cols) {
   const winningCombos = [];
 
-  // Add rows
   for (let i = 0; i < rows; i++) {
     const rowCombo = [];
     for (let j = 0; j < cols; j++) {
@@ -78,7 +77,6 @@ function generateWinningCombinations(rows, cols) {
     winningCombos.push(rowCombo);
   }
 
-  // Add columns
   for (let i = 0; i < cols; i++) {
     const colCombo = [];
     for (let j = 0; j < rows; j++) {
@@ -87,7 +85,6 @@ function generateWinningCombinations(rows, cols) {
     winningCombos.push(colCombo);
   }
 
-  // Add diagonals (if applicable)
   if (rows === cols) {
     const diagonal1 = [];
     const diagonal2 = [];
@@ -102,13 +99,29 @@ function generateWinningCombinations(rows, cols) {
   return winningCombos;
 }
 
+function handleDraw() {
+  const boxes = document.querySelectorAll(".box");
+  let count = 0;
+
+  for(let i = 0; i < boxes.length; i++){
+    if (boxes[i].innerHTML !== "") {
+      count++;
+    }
+  }
+
+  if (count === boxes.length) {
+    alert("The game ended in a Draw!");
+    reset();
+  }
+}
+
 function checkWinner() {
   const boxes = document.querySelectorAll(".box");
   const boxesLen = document.querySelectorAll(".box").length;
   const rows = parseInt(document.getElementById("range").value);
   const cols = boxesLen / rows;
   const winningCombos = generateWinningCombinations(rows, cols);
-
+  handleDraw();
   for (const combo of winningCombos) {
     const winner = combo
       .map((index) => boxes[index].innerHTML)
@@ -124,18 +137,7 @@ function checkWinner() {
   console.log("Game Continues!");
 }
 
-function handleDraw() {
-  const boxes = document.querySelectorAll(".box");
-  let count = 0;
-  if (boxes.innerHTML !== "") {
-    count++;
-  }
 
-  if (count === boxes.length) {
-    alert("Draw");
-    reset();
-  }
-}
 
 function setRange() {
   const range = document.getElementById("range");
@@ -177,6 +179,9 @@ function setBoxSize() {
 
   console.log("font size is " + fontSize + "px");
 }
+
+
+
 
 setBoxSize();
 handleThemeBtn();
