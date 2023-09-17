@@ -108,6 +108,9 @@ footer{
 input{
   padding: 5px;
   outline: none;
+  background-color: var(--bg-color);
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
 }
 
 
