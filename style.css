@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,900;1,200;1,300&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #a9a9a9;
+  --text-color: #333;
+  --block-color: rgb(255, 255, 255);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 2rem;
+  user-select: none;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Mooli', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    padding: 0px 20px;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.dark{
+    --bg-color: #333;
+    --text-color: #f5f5f5;
+    --block-color: black;
+}
+
+.light{
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+}
+
+.box {
+  padding: 1rem;
+  border: 2px solid rgb(95, 95, 95);
+  font-size: 3rem;
+  width: 100px;
+  height: 100px;
+  background-color: var(--block-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  /* background-color: red; */
+}
+
+.row {
+  display: flex;
+  gap: 2rem;
+}
+
+button {
+    background-color: var(--block-color);
+    outline: none;
+    border: none;
+    color: var(--text-color);
+  padding: 10px 20px;
+  border: 2px dashed var(--text-color);
+}
+
+#theme-btn{
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+}
+
+#github-btn{
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+}
+
+.parameters{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+
+footer{
+    margin-bottom: 1rem;
+}
+
+input{
+  padding: 5px;
+  outline: none;
+}
+
+
+@media screen and (max-width: 600px) {
+  .parameters{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+    #github-btn{
+        top: 4rem;
+        left: 5px;
+        right: 5px;
+    }
+
+    #theme-btn{
+        /* top: 4rem; */
+        left: 5px;
+        right: 5px;
+    }
+
+    .box{
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1{
+        margin-top: 8rem;
+    }
+
+    .container{
+      overflow: auto;
+    }
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: gray;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: black;
+  border-radius: 10px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tick tack toe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="light">
+    <button id="theme-btn">Dark Mode</button>
+    <button id="github-btn">
+      <a href="https://github.com/hi-kartik2004" target="_blank"
+        >Kartikeya Saini's github!</a
+      >
+    </button>
+    <h1>Tick Tack Toe Game!</h1>
+
+    <div class="parameters">
+      <label for="range">Row Count: </label>
+      <input
+        type="range"
+        min="2"
+        max="5"
+        value="3"
+        onchange="setRange()"
+        id="range"
+      />
+
+      <label for="range">Box size: </label>
+      <input
+        type="number"
+        placeholder="Enter size of box"
+        onchange="setBoxSize()"
+        id="box-size"
+      />
+    </div>
+
+    <p id="player-status">X is to Play!</p>
+
+    <!-- structure of the tick tack toe game -->
+    <section class="container"></section>
+
+    <button id="reset">Reset!</button>
+
+    <footer>
+      <p>
+        Made with ❤️ by
+        <a
+          href="https://www.linkedin.com/in/kartikeya-saini-65504b240/"
+          target="_blank"
+          >Kartikeya Saini</a
+        >
+      </p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
